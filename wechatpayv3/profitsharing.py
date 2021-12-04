@@ -31,7 +31,7 @@ def profitsharing_order(self, transaction_id, out_order_no, receivers, unfreeze_
         params.update({'receivers': receivers})
     else:
         raise Exception('receivers is not assigned')
-    params.update({'appid': appid if appid else self._core._appid})
+    params.update({'appid': appid if appid else self._appid})
     if self._partner_mode:
         if sub_appid:
             params.update({'sub_appid': sub_appid})
