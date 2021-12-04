@@ -23,7 +23,7 @@ def profitsharing_order(self, transaction_id, out_order_no, receivers, unfreeze_
         params.update({'out_order_no': out_order_no})
     else:
         raise Exception('out_order_no is not assigned')
-    if unfreeze_unsplit:
+    if isinstance(unfreeze_unsplit, bool) or unfreeze_unsplit:
         params.update({'unfreeze_unsplit': unfreeze_unsplit})
     else:
         raise Exception('unfreeze_unsplit is not assigned')
